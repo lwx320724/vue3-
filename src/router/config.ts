@@ -1,5 +1,8 @@
 // import layout from './layout'
 
+import { RouteRecord } from "vue-router"
+import { defineComponent } from 'vue'
+
 // let LayoutData = []
 // // 多维数据变一纬数组 ==》递归
 // layout.forEach(_forEach)
@@ -12,14 +15,15 @@
 //     }
 // }
 
-const routes = [
-    {
+const routes = [{
         path: "/home",
-        component: () => import("../views/menu/index.vue"),
+        component: () =>
+            import ("../views/menu/index.vue"),
     },
     {
         path: "/login",
-        component: () => import("../views/login/index.vue"),
+        component: () =>
+            import ("../views/login/index.vue"),
     },
     // {
     //     path: '/layout',
