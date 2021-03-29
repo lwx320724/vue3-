@@ -1,6 +1,10 @@
 <template>
-  <el-input placeholder="请输入密码" show-password v-model="value"></el-input>
-  <div>{{ value }}</div>
+  <el-input
+    placeholder="请输入账户"
+    v-model="value"
+    clearable
+    prefix-icon="el-icon-user"
+  ></el-input>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from "vue";
