@@ -15,16 +15,22 @@ import { defineComponent } from 'vue'
 //     }
 // }
 
-const routes = [{
+const routes = [
+    {
         path: "/home",
-        component: () =>
-            import ("../views/menu/index.vue"),
+        component: () => import("../views/menu/index.vue"),
+        children: [
+            {
+                path: "grid",
+                component: () => import("../views/chess/grid.vue"),
+            },
+        ]
     },
     {
         path: "/login",
-        component: () =>
-            import ("../views/login/index.vue"),
+        component: () => import("../views/login/index.vue"),
     },
+
     // {
     //     path: '/layout',
     //     component: () => import('../views/Layout'),
